@@ -1,5 +1,5 @@
 <?php
-
+// Change the values bellow match a setup of your db
 $servername = "localhost";
 $dBUsername = "root";
 $dBPassword = "";

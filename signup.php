@@ -28,6 +28,9 @@ require "header.php";
             <input class="form-control mb-3" type="password" name="pwd-repeat" placeholder="Repeat password" >
             <input class="btn btn-primary btn-block mb-3" type="submit" name="signup-submit" placeholder="Signup" >
         </form>
+        
+        <?php if (isset($_GET['newpwd']) && $_GET['newpwd'] == "pwdupdated") {echo "<p class=\"text-center text-success\">Password updated !</p>";}?>
+        <a href="reset-password.php" class="nav-link text-primary">Forgot your password ?</a>
     </div>
 </main>
 

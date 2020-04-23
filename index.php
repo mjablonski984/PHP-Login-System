@@ -2,7 +2,7 @@
 require "header.php";
 ?>
 
-<main class="container mt-auto mx-auto text-center">
+<main class="container mt-auto mx-auto text-center px-4 px-md-5">
     <?php if (isset($_SESSION['userId'])) : 
          // get the users uid stored in session   
         $username = ucwords($_SESSION['userUid']);
@@ -26,11 +26,11 @@ require "header.php";
         
         <h2 class="text-center my-3">Posts</h2>
         <?php foreach($posts as $post): ?>
-            <div class="card text-center p-4 mb-3">
+            <div class="card text-center mb-4 p-4 p-md-5">
                 <h3><?php echo htmlspecialchars($post['titlePosts']); ?></h3>
                 <small>Created on <?php echo $post['createdAtPosts']?> by <?php echo htmlspecialchars($post['createdByPosts']); ?>.</small>
-                <p><?php echo htmlspecialchars($post['bodyPosts']);?></p>
-                <a href="<?php echo 'http://localhost/tuts/login/';?>post.php?id=<?php echo $post['idPosts'];?>" class="btn btn-secondary">Read More</a>
+                <p class="text-justify my-4"><?php echo htmlspecialchars(substr(($post['bodyPosts']),0,500)) ;?></p>
+                <a href="<?php echo 'http://localhost/tuts/login/';?>post.php?id=<?php echo $post['idPosts'];?>" class="btn btn-dark w-50 mx-auto">Read More</a>
             </div>
         <?php endforeach; ?>
 

@@ -4,7 +4,7 @@ require "header.php";
 if (!isset($_SESSION['userId'])) {header('Location: ./index.php');}
 ?>
 
-<main class="container mt-auto mx-auto">
+<main class="container card bg-light mt-auto mx-auto p-4">
 
     <h2 class="text-center my-2">Add Post</h2>
 
@@ -24,9 +24,9 @@ if (!isset($_SESSION['userId'])) {header('Location: ./index.php');}
     </div>
     <div class="form-group">
         <label for="body">Body</label>
-        <textarea name="body" class="form-control" id="body" rows="10"></textarea>
+        <textarea name="body" class="form-control" id="body" rows="12"></textarea>
     </div>
-    <input type="submit" name="add-post" value="Submit" class="btn btn-dark">
+    <input type="submit" name="add-post" value="Submit" class="btn btn-primary">
     </form>
 
 </main>

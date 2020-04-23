@@ -16,7 +16,7 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="#">PHP Blog</a>
+                <a class="navbar-brand" href="index.php">PHP Blog</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -27,7 +27,7 @@
                     <?php if (isset($_SESSION['userId'])) : ?>
                     <li class="nav-item"><a href="add-post.php" class="nav-link">Add post</a></li>     
                     <?php endif ?>   
-                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
                     </ul>
 
 

@@ -1,11 +1,10 @@
 <?php 
 require "header.php";
-//redirect to index.php if user isn't logged in
-// if (!isset($_SESSION['userId'])) {header('Location: ./index.php');}
+
 require "./includes/get-post.inc.php" // load post with id from url
 ?>
 
-<main class="container mt-auto mx-auto">
+<main class="container card bg-light mt-auto mx-auto p-4">
 
     <h2 class="text-center my-3">Edit Post</h2>
 
@@ -25,11 +24,11 @@ require "./includes/get-post.inc.php" // load post with id from url
         </div>
         <div class="form-group">
             <label for="body">Body</label>
-            <textarea class="form-control" name="body" rows="10" id="body" ><?php echo $post['bodyPosts'] ;?></textarea>
+            <textarea class="form-control" name="body" rows="12" id="body" ><?php echo $post['bodyPosts'] ;?></textarea>
         </div>
-        <!-- Hidden input with post id used for update /delete -->
+        <!-- Hidden input with post id used for update -->
         <input type="hidden" name="edit_id" value="<?php echo $post['idPosts'];?>">
-        <input type="submit" name="edit-post" value="Submit" class="btn btn-dark">
+        <input type="submit" name="edit-post" value="Submit" class="btn btn-primary">
     </form>    
 
 

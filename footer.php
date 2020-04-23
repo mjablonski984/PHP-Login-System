@@ -1,5 +1,5 @@
  
-<footer class="footer text-center mt-auto bg-dark p-3">
+<footer class="footer text-center mt-auto bg-primary p-3">
     <div class="container">
         <span class="text-light">&copy; MJ <?php echo date('Y');?></span>
     </div>

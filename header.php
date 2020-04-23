@@ -1,5 +1,5 @@
 <?php 
-    session_start();
+    session_start(); // place session in header to start session on every page where it's included
 ?>
 
 <!DOCTYPE html>
@@ -8,15 +8,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/sandstone/bootstrap.min.css" rel="stylesheet" integrity="sha384-ABdnjefqVzESm+f9z9hcqx2cvwvDNjfrwfW5Le9138qHCMGlNmWawyn/tt4jR4ba" crossorigin="anonymous">
-    <title>PHP Login System</title>
+    <title>PHP Blog</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="#">PHP Login</a>
+                <a class="navbar-brand" href="#">PHP Blog</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -24,6 +24,9 @@
                 <div class="collapse navbar-collapse text-center" id="navbarsExampleDefault">
                     <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+                    <?php if (isset($_SESSION['userId'])) : ?>
+                    <li class="nav-item"><a href="add-post.php" class="nav-link">Add post</a></li>     
+                    <?php endif ?>   
                     <li class="nav-item"><a href="#" class="nav-link">About</a></li>
                     </ul>
 

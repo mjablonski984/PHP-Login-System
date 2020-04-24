@@ -25,7 +25,7 @@ if(isset($_POST['add-post'])){
     } else {
         mysqli_stmt_bind_param($stmt,"ssss",$title,$body,$author,$userId);
         mysqli_stmt_execute($stmt);
-        header('Location: ../index.php?addpost=success');
+        header('Location: ../my-posts.php?addpost=success');
     }
     mysqli_stmt_close($conn);
 

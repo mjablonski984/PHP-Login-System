@@ -11,7 +11,7 @@ require 'includes/post.inc.php'; // require after header !(start session in head
 
         <div class="row display-flex justify-content-between px-4">
             <!-- Back to index-->
-            <a href="<?php echo './index.php';?>" class="btn btn-dark text-center ">Back</a>
+            <a href="<?php echo './my-posts.php';?>" class="btn btn-dark text-center ">Back</a>
             <!-- Edit -->
             <a href="<?php echo './edit-post.php?id='.$post["idPosts"]; ?>" class="btn btn-primary">
             Edit Post</a>

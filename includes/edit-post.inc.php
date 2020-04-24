@@ -28,7 +28,7 @@ if (isset($_SESSION['userId'])) {
         } else {
             mysqli_stmt_bind_param($stmt,"sssss",$title,$body,$author,$editId,$userId);
             mysqli_stmt_execute($stmt);
-            header('Location: ../index.php?editpost=success');
+            header('Location: ../my-posts.php?editpost=success');
         }
         mysqli_stmt_close($conn);
 

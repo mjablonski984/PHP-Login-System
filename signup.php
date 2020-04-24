@@ -22,8 +22,8 @@ require "header.php";
     
         <h2 class="text-primary mb-4">Sign Up</h2>
         <form action="includes/signup.inc.php" method="post">
-            <input class="form-control mb-3" type="text" name="uid" placeholder="Username" >
-            <input class="form-control mb-3" type="text" name="mail" placeholder="E-mail" >
+            <input class="form-control mb-3" type="text" name="uid" placeholder="Username" value="<?php echo htmlspecialchars($_GET['uid'] ?? '');?>">
+            <input class="form-control mb-3" type="text" name="mail" placeholder="E-mail" value="<?php echo htmlspecialchars($_GET['mail'] ?? '');?>">
             <input class="form-control mb-3" type="password" name="pwd" placeholder="Password" >
             <input class="form-control mb-3" type="password" name="pwd-repeat" placeholder="Repeat password" >
             <input class="btn btn-primary btn-block mb-3" type="submit" name="signup-submit" placeholder="Signup" >

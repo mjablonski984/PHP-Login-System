@@ -25,6 +25,7 @@
                     <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
                     <?php if (isset($_SESSION['userId'])) : ?>
+                    <li class="nav-item"><a href="my-posts.php" class="nav-link">My posts</a></li>     
                     <li class="nav-item"><a href="add-post.php" class="nav-link">Add post</a></li>     
                     <?php endif ?>   
                     <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>

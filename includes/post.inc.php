@@ -41,7 +41,7 @@ if(isset($_POST['delete'])){
     } else {
         mysqli_stmt_bind_param($stmt,"ss",$delete_id,$userId);
         mysqli_stmt_execute($stmt);
-        header("Location: ./index.php?deletepost=success");
+        header("Location: ./my-posts.php?deletepost=success");
 
         mysqli_free_result($result);
     }

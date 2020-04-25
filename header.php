@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/sandstone/bootstrap.min.css" rel="stylesheet" integrity="sha384-ABdnjefqVzESm+f9z9hcqx2cvwvDNjfrwfW5Le9138qHCMGlNmWawyn/tt4jR4ba" crossorigin="anonymous">
-    <title>PHP Blog</title>
+    <title>PHP Blog & Gallery</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="index.php">PHP Blog</a>
+                <a class="navbar-brand" href="index.php">PHP Blog & Gallery</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -27,6 +27,7 @@
                     <?php if (isset($_SESSION['userId'])) : ?>
                     <li class="nav-item"><a href="my-posts.php" class="nav-link">My posts</a></li>     
                     <li class="nav-item"><a href="add-post.php" class="nav-link">Add post</a></li>     
+                    <li class="nav-item"><a href="gallery.php" class="nav-link">My gallery</a></li>     
                     <?php endif ?>   
                     <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
                     </ul>

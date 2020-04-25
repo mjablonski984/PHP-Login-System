@@ -6,7 +6,7 @@ require 'dbh.inc.php';
 if (isset($_SESSION['userId']))  { 
     $sql = "SELECT * FROM posts ORDER BY createdAtPosts DESC;";
 } else {
-    $sql = "SELECT * FROM posts ORDER BY createdAtPosts DESC LIMIT 10;";
+    $sql = "SELECT * FROM posts ORDER BY createdAtPosts DESC LIMIT 5;";
 }
 // Get results and fetch as assoc. array 
 $result = mysqli_query($conn,$sql);

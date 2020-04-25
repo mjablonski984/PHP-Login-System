@@ -4,6 +4,7 @@ require "header.php";
 
 <main class="container mt-auto mx-auto text-center">
     <div class="card card-body col-9 col-md-6 p-3 p-md-4 m-auto bg-light">
+    <h3 class="text-primary mb-4">Sign Up</h3>   
     <?php 
     //check for errors in url (passed in param from signup.inc.php)
         if (isset($_GET['error'])) {
@@ -15,12 +16,9 @@ require "header.php";
             if ($_GET['error'] == "usertaken") {echo "<p class=\"text-center text-warning\">Username is already taken</p>";}
         } elseif (isset($_GET['signup'])) {
             if ($_GET['signup'] == "success") {echo "<p class=\"text-center text-success\">User successfuly created</p>";}
-        } 
-        
+        }        
     ?>
 
-    
-        <h2 class="text-primary mb-4">Sign Up</h2>
         <form action="includes/signup.inc.php" method="post">
             <input class="form-control mb-3" type="text" name="uid" placeholder="Username" value="<?php echo htmlspecialchars($_GET['uid'] ?? '');?>">
             <input class="form-control mb-3" type="text" name="mail" placeholder="E-mail" value="<?php echo htmlspecialchars($_GET['mail'] ?? '');?>">

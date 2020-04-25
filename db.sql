@@ -26,3 +26,13 @@ CREATE TABLE posts (
     FOREIGN KEY(idUsers) REFERENCES users(idUsers)
 );
 
+CREATE TABLE gallery (
+	idGallery int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    titleGallery TINYTEXT NOT NULL,
+    descGallery TEXT NOT NULL,
+   	imgFullNameGallery TEXT NOT NULL,
+    createdAtGallery TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    idUsers int(11) NOT NULL,
+    FOREIGN KEY(idUsers) REFERENCES users(idUsers)
+);
+

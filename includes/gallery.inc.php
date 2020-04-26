@@ -28,19 +28,20 @@ if (isset($_SESSION['userId']))  {
         $fileActualExt = strtolower(end($fileExt));
 
         $allowed = ['jpg','jpeg','png'];
-
+   
+        $errorPath = "../gallery.php?filetitle=$imageTitle&filedesc=$imageDesc&error";
         // check for errors: file-type, file-size, internal file errors, and empty title & desc fields
         if (!in_array($fileActualExt,$allowed)) {
-            header("Location: ../gallery.php?error=filetype");
+            header("Location: $errorPath=filetype");
             exit();
         } elseif ($fileError !== 0) {
-            header("Location: ../gallery.php?error=file");
+            header("Location: $errorPath=file");
             exit();
         } elseif ($fileSize > 2000000) {
-            header("Location: ../gallery.php?error=filesize");
+            header("Location: $errorPath=filesize");
             exit();
         } elseif (empty($imageTitle) || empty($imageDesc)) {
-            header("Location: ../gallery.php?error=emptyfields");
+            header("Location: $errorPath=emptyfields");
             exit();
         } else {
             

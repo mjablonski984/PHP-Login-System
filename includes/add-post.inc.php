@@ -5,7 +5,7 @@ if (isset($_SESSION['userId'])) {
 if(isset($_POST['add-post'])){
     
     if (empty($_POST['title']) || empty($_POST['body']) || empty($_POST['author'])){
-        header("Location: ../add-post.php?error=emptyfields");
+        header("Location: ../add-post.php?title={$_POST['title']}&body={$_POST['body']}&author={$_POST['author']}&error=emptyfields");
         exit();
     }
 

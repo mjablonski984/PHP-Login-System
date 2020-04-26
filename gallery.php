@@ -25,9 +25,9 @@ if (!isset($_SESSION['userId'])) {header("Location: ./index.php");}
     <div class="card card-body col-9 col-md-6 p-3 p-md-4 m-auto bg-light">
         <h3 class="text-primary mb-4">Upload image</h3>
         <form action="includes/gallery.inc.php" method="post" enctype="multipart/form-data">
-            <input type="text" class="form-control mb-3" name="filename" placeholder="File name">                
-            <input type="text" class="form-control mb-3" name="filetitle" placeholder="Image title">                
-            <input type="text" class="form-control mb-3" name="filedesc" placeholder="Image description">                
+            <input type="text" class="form-control mb-3" name="filename" placeholder="File name" >                
+            <input type="text" class="form-control mb-3" name="filetitle" placeholder="Image title" value="<?php echo htmlspecialchars($_GET['filetitle'] ?? '')?>">                
+            <input type="text" class="form-control mb-3" name="filedesc" placeholder="Image description" value="<?php echo htmlspecialchars($_GET['filedesc'] ?? '')?>">                
             <div class="custom-file">
             <input type="file" class="custom-file-input" name="file" id="fileInput">
             <label class="custom-file-label">Choose file</label>
